@@ -1,0 +1,167 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-image: url('tech.jpg'); /* Path to your header background image */
+    background-size: cover; /* Cover the entire header with the image */
+    background-position: center;
+    opacity: 0.8;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    flex: 1;
+    color: #fff;
+    margin-left: 5%;
+}
+
+.header-right {
+    flex: 1;
+    text-align: right;
+}
+
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.header-right a:hover {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white on hover */
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+/* Container Highlighting */
+.highlighted-container {
+    /*background-color: #ffd700; /* Highlighted background color (e.g., gold) */
+    padding: 20px;
+    margin-bottom: 20px; /* Add some margin to separate from other content */
+}
+
+.content-with-image.reverse {
+    /*background-color: #ffd700; /* Highlighted background color (e.g., gold) */
+    padding: 20px;
+    margin-bottom: 20px; /* Add some margin to separate from other content */
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px 0;
+}
+
+/* Content with Image Styles */
+.content-with-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end; /* Move content to the right */
+    margin-bottom: 100px;
+}
+
+.content-with-image .text{
+    flex: 1;
+    margin-bottom: 20px;
+    margin-right: 80px;
+}
+
+.content-with-image .image {
+    flex: 1;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+.content-with-image .image {
+    margin-left: auto; /* Move the image to the right */
+    
+}
+
+.content-with-image .image img {
+    max-width: 500px; /* Set maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is a block element */
+    border-radius: 2%;
+}
+
+/* Reverse Content with Image Styles */
+.content-with-image.reverse .image img {
+    order: -1; /* Reverse the order of the image */
+}
+
+.content-with-image.reverse .text {
+    text-align: right; /* Align text to the right for reversed order */
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+    bottom: 0;
+    width: 100%;
+}
+
+.stagger-animation {
+    opacity: 0;
+}
+
+.stagger-animation.animated {
+    animation: staggerUp 0.5s ease forwards;
+}
+
+@keyframes staggerUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
